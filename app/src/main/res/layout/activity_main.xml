@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="10"
+    android:padding="8dp"
+    tools:context="com.company.gaurav.weather.activity.MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:orientation="horizontal"
+        android:layout_weight="3">
+
+        <EditText
+            android:id="@+id/enter_location"
+            android:layout_width="0dp"
+            android:inputType="text"
+
+            android:maxLines="1"
+
+            android:layout_height="wrap_content"
+            android:layout_weight="1.7"
+            android:drawablePadding="15dp"
+            android:drawableTint="@color/colorAccent"
+            android:hint="Enter City"
+            android:padding="16dp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="7"
+        android:orientation="vertical"
+        android:layout_margin="10dp"
+        android:padding="8dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2"
+            android:padding="8dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:textColor="#607D8B"
+                android:drawableTint="@color/colorPrimary"
+                android:id="@+id/location_name"/>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+
+            android:padding="12dp">
+
+            <TextView
+                android:id="@+id/weather_type_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+
+                android:textColor="#78909C"
+                android:textSize="16dp" />
+
+            <ImageView
+                android:id="@+id/weatherIcon"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginEnd="14dp"
+                android:layout_marginRight="14dp"
+                android:scaleType="fitXY"
+                 />
+
+            <TextView
+                android:id="@+id/information_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/weatherIcon"
+                android:layout_marginTop="12dp"
+
+                android:textSize="12dp" />
+
+            <TextView
+                android:id="@+id/temperature"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/information_text"
+                android:layout_marginTop="36dp"
+                 />
+
+            <TextView
+                android:id="@+id/pressure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/temperature"
+                android:layout_marginTop="23dp"
+                 />
+
+            <TextView
+                android:id="@+id/humidity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_below="@+id/pressure"
+                android:layout_marginTop="28dp"
+                 />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
